@@ -54,7 +54,6 @@ public class RestaurantListActivity extends ActionBarActivity
                     .setActivateOnItemClick(true);
         }
 
-        // TODO: If exposing deep links into your app, handle intents here.
     }
 
     /**
