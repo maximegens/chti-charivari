@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
 
+import com.maximegens.chticharivari.beans.RestaurantChti;
+
 
 /**
  * An activity representing a list of LesRestaurants. This activity
@@ -60,13 +62,13 @@ public class RestaurantListActivity extends ActionBarActivity
      * indicating that the item with the given ID was selected.
      */
     @Override
-    public void onItemSelected(String id) {
+    public void onItemSelected(RestaurantChti item) {
         if (mTwoPane) {
             // In two-pane mode, show the detail view in this activity by
             // adding or replacing the detail fragment using a
             // fragment transaction.
             Bundle arguments = new Bundle();
-            arguments.putString(RestaurantDetailFragment.ARG_ITEM_ID, id);
+            arguments.putParcelable(RestaurantDetailFragment.ARG_ITEM_ID, item);
             RestaurantDetailFragment fragment = new RestaurantDetailFragment();
             fragment.setArguments(arguments);
             getSupportFragmentManager().beginTransaction()
@@ -77,7 +79,7 @@ public class RestaurantListActivity extends ActionBarActivity
             // In single-pane mode, simply start the detail activity
             // for the selected item ID.
             Intent detailIntent = new Intent(this, RestaurantDetailActivity.class);
-            detailIntent.putExtra(RestaurantDetailFragment.ARG_ITEM_ID, id);
+            detailIntent.putExtra(RestaurantDetailFragment.ARG_ITEM_ID, item);
             startActivity(detailIntent);
         }
     }

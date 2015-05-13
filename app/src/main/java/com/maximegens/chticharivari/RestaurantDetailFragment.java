@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 
-import com.maximegens.chticharivari.Beans.LesRestaurantsChti;
-import com.maximegens.chticharivari.Beans.RestaurantChti;
+import com.maximegens.chticharivari.beans.LesRestaurantsChti;
+import com.maximegens.chticharivari.beans.RestaurantChti;
 
 /**
  * A fragment representing a single Restaurant detail screen.
@@ -37,13 +37,12 @@ public class RestaurantDetailFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        lesRestaurantsChti = new LesRestaurantsChti();
-
+        LesRestaurantsChti lesRestaurantsChti = new LesRestaurantsChti();
         if (getArguments().containsKey(ARG_ITEM_ID)) {
             // Load the dummy content specified by the fragment
             // arguments. In a real-world scenario, use a Loader
             // to load content from a content provider
-            restaurant = lesRestaurantsChti.getrestaurantById(getArguments().getString(ARG_ITEM_ID));
+            restaurant = getArguments().getParcelable(ARG_ITEM_ID);
         }
     }
 
@@ -54,8 +53,8 @@ public class RestaurantDetailFragment extends Fragment {
 
         // Show the dummy content as text in a TextView.
         if (restaurant != null) {
-            ((TextView) rootView.findViewById(R.id.restaurant_detail_id)).setText(restaurant.getId());
-            ((TextView) rootView.findViewById(R.id.restaurant_detail_ville)).setText(restaurant.getVille());
+            ((TextView) rootView.findViewById(R.id.restaurant_detail_id)).setText(String.valueOf(restaurant.getId()));
+            ((TextView) rootView.findViewById(R.id.restaurant_detail_ville)).setText(restaurant.getNom());
         }
 
         return rootView;

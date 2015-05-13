@@ -4,14 +4,17 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
 
-import com.maximegens.chticharivari.Adapters.RestaurantsAdapter;
-import com.maximegens.chticharivari.Beans.LesRestaurantsChti;
-import com.maximegens.chticharivari.Beans.RestaurantChti;
+import com.google.gson.Gson;
+import com.maximegens.chticharivari.adapters.RestaurantsAdapter;
+import com.maximegens.chticharivari.beans.LesRestaurantsChti;
+import com.maximegens.chticharivari.beans.RestaurantChti;
+import com.maximegens.chticharivari.utils.Connection;
+import com.maximegens.chticharivari.utils.Constantes;
+import com.maximegens.chticharivari.utils.Json;
 
 /**
  * A list fragment representing a list of LesRestaurants. This fragment
@@ -24,8 +27,10 @@ import com.maximegens.chticharivari.Beans.RestaurantChti;
  */
 public class RestaurantListFragment extends ListFragment {
 
+    LesRestaurantsChti restaurants;
     RestaurantsAdapter adapter;
-
+    boolean isconnected = false;
+    String json;
     /**
      * The serialization (saved instance state) Bundle key representing the
      * activated item position. Only used on tablets.
@@ -52,7 +57,7 @@ public class RestaurantListFragment extends ListFragment {
         /**
          * Callback for when an item has been selected.
          */
-        public void onItemSelected(String id);
+        public void onItemSelected(RestaurantChti item);
     }
 
     /**
@@ -61,7 +66,7 @@ public class RestaurantListFragment extends ListFragment {
      */
     private static Callbacks sDummyCallbacks = new Callbacks() {
         @Override
-        public void onItemSelected(String id) {
+        public void onItemSelected(RestaurantChti item) {
         }
     };
 
@@ -76,8 +81,22 @@ public class RestaurantListFragment extends ListFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        //On verifie si la connexion internet est activée ou non
+        //isconnected = Connection.isConnectedInternet(getActivity());
+
+        if(isconnected){
+            //on recupere la liste des restaurants en ligne
+            //on met a jour le fichier local.
+        }else{
+            //on recupere la liste dans le fichier local
+            json = Json.getJsonFromAssets(getActivity().getAssets(), Constantes.LOCAL_RESTAURANTS_CHTI_CHARIVARI);
+            restaurants = new Gson().fromJson(json, LesRestaurantsChti.class);
+
+        }
+
         //Création et initialisation de l'Adapter pour les personnes
-        adapter = new RestaurantsAdapter(getActivity(), LesRestaurantsChti.lesRestaurants);
+        adapter = new RestaurantsAdapter(getActivity(), restaurants.restaurants);
+
         setListAdapter(adapter);
     }
 
@@ -115,12 +134,11 @@ public class RestaurantListFragment extends ListFragment {
     @Override
     public void onListItemClick(ListView listView, View view, int position, long id) {
         super.onListItemClick(listView, view, position, id);
-
-        position = position +1;
+        RestaurantChti item = (RestaurantChti) getListAdapter().getItem(position);
         // Notify the active callbacks interface (the activity, if the
         // fragment is attached to one) that an item has been selected.
-        if(LesRestaurantsChti.lesRestaurants != null) {
-            mCallbacks.onItemSelected(LesRestaurantsChti.getrestaurantById(String.valueOf(position)).getId());
+        if(restaurants != null) {
+            mCallbacks.onItemSelected(item);
         }else{
             Toast.makeText(getActivity(),"Erreur, la liste des restaurants est null", Toast.LENGTH_SHORT).show();
         }
