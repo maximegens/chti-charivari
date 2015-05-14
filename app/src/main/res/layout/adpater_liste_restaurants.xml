@@ -2,16 +2,46 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/adpater_restaurant">
+    android:id="@+id/adpater_restaurant"
+    android:background="@color/bleu_doux">
 
-        <TextView android:text="id " android:id="@+id/restaurant_id"
+    <TextView
+        android:id="@+id/restaurant_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <TextView android:text="Boulogne sur mer" android:id="@+id/restaurant_nom"
+            android:textSize="16sp"
+            android:textColor="@color/marron_titre"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
         </TextView>
 
-        <TextView android:text=" Ville" android:id="@+id/restaurant_ville"
-            android:layout_width="wrap_content"
+        <TextView android:text="141 km" android:id="@+id/restaurant_distance"
+            android:gravity="right"
+            android:textColor="@color/marron_titre"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
         </TextView>
+    </LinearLayout>
+
+    <TextView android:text="35 rue des pyramides Boulogne sur mer 59000 France"
+        android:id="@+id/restaurant_adresse"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/gris"
+        android:textStyle="italic"
+        android:lines="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
 
 </LinearLayout>

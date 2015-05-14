@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Fichier contenants toutes les couleurs de l'application ChTi Charivari -->
+<resources>
+
+    <item name="bleu_doux" type="color">#ECF6FF</item>
+    <item name="noir" type="color">#000000</item>
+    <item name="blanc" type="color">#FFFFFF</item>
+    <item name="gris" type="color">#9AA5A4</item>
+    <item name="marron_titre" type="color">#C4A35E</item>
+
+</resources>

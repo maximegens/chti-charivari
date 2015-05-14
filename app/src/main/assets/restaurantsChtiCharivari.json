@@ -2,8 +2,8 @@
   "restaurants": [
     {
       "id": "1",
-      "nom": "AIRE SUR LA LYS",
-      "adresse": "5 avenue Carnot, 62120 AIRE SUR LA LYS, France",
+      "nom": "Aire sur la Lys",
+      "adresse": "5 avenue Carnot, 62120 Aire sur la Lys, France",
       "telephone": "0321955566",
       "url_img": "http://airesurlalys.chticharivari.eu/imgs/img-ban.jpg",
       "ouverture": "",
@@ -16,8 +16,8 @@
     },
     {
       "id": "2",
-      "nom": "AMIENS",
-      "adresse": "52 rue des Jacobins, 80000 AMIENS, France",
+      "nom": "Amiens",
+      "adresse": "52 rue des Jacobins, 80000 Amiens, France",
       "telephone": "0322914582",
       "url_img": "http://amiens.chticharivari.eu/imgs/img-ban.jpg",
       "ouverture": "Ouvert 6jrs/7 sauf Samedi midi et la journee du Dimanche ",
@@ -30,8 +30,8 @@
     },
     {
       "id": "3",
-      "nom": "ARRAS",
-      "adresse": "51-53 Grand Place, 62000 ARRAS, France",
+      "nom": "Arras",
+      "adresse": "51-53 Grand Place, 62000 Arras, France",
       "telephone": "0321240250",
       "url_img": "http://arras.chticharivari.eu/imgs/img-ban.jpg",
       "ouverture": "Ouvert 6jrs/7 (ferme tous les lundis) ",
@@ -44,8 +44,8 @@
     },
     {
       "id": "4",
-      "nom": "BETHUNE",
-      "adresse": "136, rue Ludovic Boutleux, 62400 BETHUNE, France ",
+      "nom": "Béthune",
+      "adresse": "136, rue Ludovic Boutleux, 62400 Béthune, France ",
       "telephone": "0981217573",
       "url_img": "http://bethune.chticharivari.eu/imgs/img-ban.jpg",
       "ouverture": "Ouvert 7jrs/7 sauf le lundi soir et le samedi midi",
@@ -58,8 +58,8 @@
     },
     {
       "id": "5",
-      "nom": "BOULOGNE SUR MER",
-      "adresse": "3-7 rue du Doyen, 62200 BOULOGNE SUR MER, France",
+      "nom": "Boulogne sur Mer",
+      "adresse": "3-7 rue du Doyen, 62200 Boulogne sur Mer, France",
       "telephone": "0321300102",
       "url_img": "http://boulogne.chticharivari.eu/imgs/img-ban.jpg",
       "ouverture": "Ouvert 7jrs/7",
@@ -72,7 +72,7 @@
     },
     {
       "id": "6",
-      "nom": "CALAIS",
+      "nom": "Calais",
       "adresse": "",
       "telephone": "",
       "url_img": "",
@@ -86,8 +86,8 @@
     },
     {
       "id": "7",
-      "nom": "DOUAI",
-      "adresse": "6 rue de la Boucherie, 59500 DOUAI, France",
+      "nom": "Douai",
+      "adresse": "6 rue de la Boucherie, 59500 Douai, France",
       "telephone": "0327960960",
       "url_img": "http://douai.chticharivari.eu/imgs/img-ban.jpg",
       "ouverture": "Ouvert 7jrs/7",
@@ -100,7 +100,7 @@
     },
     {
       "id": "8",
-      "nom": "DUNKERQUE",
+      "nom": "Dunkerque",
       "adresse": "49 bis digue de mer, 59240 Malo les bains",
       "telephone": "0328696202",
       "url_img": "http://dunkerque.chticharivari.eu/imgs/img-ban.jp",
@@ -114,7 +114,7 @@
     },
     {
       "id": "9",
-      "nom": "HENIN-BEAUMONT",
+      "nom": "Hénin-Beaumont",
       "adresse": "Avenue du Bord des Eaux, 62110 Henin-Beaumont",
       "telephone": "0321200808",
       "url_img": "http://heninbeaumont.chticharivari.eu/imgs/img-ban.jpg",
@@ -128,8 +128,8 @@
     },
     {
       "id": "10",
-      "nom": "LE TOUQUET",
-      "adresse": "80 rue de Londres, 62520 LE TOUQUET PARIS-PLAGE",
+      "nom": "Le Touquet",
+      "adresse": "80 rue de Londres, 62520 Le Touquet Paris-Plage",
       "telephone": "0321052727",
       "url_img": "http://letouquet.chticharivari.eu/imgs/img-ban.jpg",
       "ouverture": "Ouvert 7jrs/7",
@@ -142,8 +142,8 @@
     },
     {
       "id": "11",
-      "nom": "LOMME",
-      "adresse": "1 Rue du Chateau d'Isenghien, ZA du Grand But, 59160 LOMME",
+      "nom": "Lomme",
+      "adresse": "1 Rue du Chateau d'Isenghien, ZA du Grand But, 59160 Lomme",
       "telephone": "0950325872",
       "url_img": "http://lomme.chticharivari.eu/imgs/img-ban.jpg",
       "ouverture": "Ouvert 7jrs/7",
@@ -156,8 +156,8 @@
     },
     {
       "id": "12",
-      "nom": "SAINT-OMER",
-      "adresse": "76 Rue de Dunkerque 62500 SAINT-OMER",
+      "nom": "Saint-Omer",
+      "adresse": "76 Rue de Dunkerque 62500 Saint-Omer",
       "telephone": "03 21 95 13 73",
       "url_img": "http://saintomer.chticharivari.eu/imgs/img-ban.jpg",
       "ouverture": "Ouvert 6jrs/7 dont le samedi matin (ferme le lundi)",
@@ -170,8 +170,8 @@
     },
     {
       "id": "13",
-      "nom": "VALENCIENNES",
-      "adresse": "3 rue Henri Lemaire, 59300 VALENCIENNES, France",
+      "nom": "Valenciennes",
+      "adresse": "3 rue Henri Lemaire, 59300 Valenciennes, France",
       "telephone": "0327300444",
       "url_img": "http://valenciennes.chticharivari.eu/imgs/img-ban.jpg",
       "ouverture": "Ouvert du Mardi midi au samedi soir",
@@ -184,8 +184,8 @@
     },
     {
       "id": "14",
-      "nom": "VILLENEUVE D'ASCQ",
-      "adresse": "208 Rue Jean Jaures 59650, VILLENEUVE D'ASCQ",
+      "nom": "Villeneuve d'Ascq",
+      "adresse": "208 Rue Jean Jaures 59650, Villeneuve d'Ascq",
       "telephone": "0320330405",
       "url_img": "http://villeneuve.chticharivari.eu/imgs/img-ban.jpg",
       "ouverture": "Ouvert 7jrs/7 , tous les jours midi et soir",
@@ -198,8 +198,8 @@
     },
     {
       "id": "15",
-      "nom": "WIMEREUX",
-      "adresse": "84 Avenue Francois Mitterrand, 62930 WIMEREUX, France",
+      "nom": "Wimereux",
+      "adresse": "84 Avenue Francois Mitterrand, 62930 Wimereux, France",
       "telephone": "0321300120",
       "url_img": "http://wimereux.chticharivari.eu/imgs/img-ban.jpg",
       "ouverture": "Ouvert 7jrs/7",

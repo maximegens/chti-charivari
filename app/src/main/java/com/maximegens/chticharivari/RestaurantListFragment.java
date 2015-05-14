@@ -1,6 +1,9 @@
 package com.maximegens.chticharivari;
 
 import android.app.Activity;
+import android.graphics.Color;
+import android.graphics.drawable.ClipDrawable;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.View;
@@ -57,7 +60,7 @@ public class RestaurantListFragment extends ListFragment {
         /**
          * Callback for when an item has been selected.
          */
-        public void onItemSelected(RestaurantChti item);
+        void onItemSelected(RestaurantChti item);
     }
 
     /**
@@ -87,17 +90,21 @@ public class RestaurantListFragment extends ListFragment {
         if(isconnected){
             //on recupere la liste des restaurants en ligne
             //on met a jour le fichier local.
+            Toast.makeText(getActivity().getApplicationContext(),"Connexion internet ok", Toast.LENGTH_SHORT).show();
+
         }else{
             //on recupere la liste dans le fichier local
             json = Json.getJsonFromAssets(getActivity().getAssets(), Constantes.LOCAL_RESTAURANTS_CHTI_CHARIVARI);
             restaurants = new Gson().fromJson(json, LesRestaurantsChti.class);
 
+
         }
 
         //Création et initialisation de l'Adapter pour les personnes
         adapter = new RestaurantsAdapter(getActivity(), restaurants.restaurants);
-
         setListAdapter(adapter);
+
+
     }
 
     @Override
