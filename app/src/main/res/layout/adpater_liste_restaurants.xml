@@ -20,7 +20,7 @@
 
         <TextView android:text="Boulogne sur mer" android:id="@+id/restaurant_nom"
             android:textSize="16sp"
-            android:textColor="@color/marron_titre"
+            android:textColor="@color/marron_nom_restaurant"
             android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -28,7 +28,7 @@
 
         <TextView android:text="141 km" android:id="@+id/restaurant_distance"
             android:gravity="right"
-            android:textColor="@color/marron_titre"
+            android:textColor="@color/marron_nom_restaurant"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         </TextView>

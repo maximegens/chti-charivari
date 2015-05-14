@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 
 import com.maximegens.chticharivari.beans.RestaurantChti;
 
@@ -24,7 +26,7 @@ import com.maximegens.chticharivari.beans.RestaurantChti;
  * {@link RestaurantListFragment.Callbacks} interface
  * to listen for item selections.
  */
-public class RestaurantListActivity extends ActionBarActivity
+public class RestaurantListActivity extends AppCompatActivity
         implements RestaurantListFragment.Callbacks {
 
     /**
@@ -38,7 +40,9 @@ public class RestaurantListActivity extends ActionBarActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurant_list);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if(getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         if (findViewById(R.id.restaurant_detail_container) != null) {
             // The detail container view will be present only in the

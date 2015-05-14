@@ -3,19 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/restaurant_detail"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="@drawable/corps">
 
     <TextView
-        style="?android:attr/textAppearanceLarge" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:padding="16dp" android:textIsSelectable="true"
+        style="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:textIsSelectable="true"
         android:id="@+id/restaurant_detail_id"
         android:text="1"
         tools:context=".RestaurantDetailFragment" />
 
     <TextView
-        style="?android:attr/textAppearanceLarge" android:layout_width="wrap_content"
+        style="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
         android:layout_toRightOf="@+id/restaurant_detail_id"
-        android:layout_height="wrap_content" android:padding="16dp" android:textIsSelectable="true"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:textIsSelectable="true"
         android:id="@+id/restaurant_detail_ville"
         android:text="Boulogne"
         tools:context=".RestaurantDetailFragment" />

@@ -6,7 +6,7 @@
     <item name="bleu_doux" type="color">#ECF6FF</item>
     <item name="noir" type="color">#000000</item>
     <item name="blanc" type="color">#FFFFFF</item>
-    <item name="gris" type="color">#9AA5A4</item>
-    <item name="marron_titre" type="color">#C4A35E</item>
-
+    <item name="gris" type="color">#ABB6B5</item>
+    <item name="marron_nom_restaurant" type="color">#C4A35E</item>
+    <item name="marron_titre" type="color">#673b15</item>
 </resources>
