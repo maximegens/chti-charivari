@@ -5,11 +5,13 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
 import com.maximegens.chticharivari.beans.LesRestaurantsChti;
 import com.maximegens.chticharivari.beans.RestaurantChti;
+import com.maximegens.chticharivari.utils.Constantes;
 
 /**
  * A fragment representing a single Restaurant detail screen.
@@ -53,8 +55,15 @@ public class RestaurantDetailFragment extends Fragment {
 
         // Show the dummy content as text in a TextView.
         if (restaurant != null) {
-            ((TextView) rootView.findViewById(R.id.restaurant_detail_id)).setText(String.valueOf(restaurant.getId()));
             ((TextView) rootView.findViewById(R.id.restaurant_detail_ville)).setText(restaurant.getNom());
+            ((TextView) rootView.findViewById(R.id.restaurant_detail_adresse)).setText(restaurant.getAdresse());
+            ((TextView) rootView.findViewById(R.id.restaurant_detail_horaire)).setText(restaurant.getOuverture());
+            ((TextView) rootView.findViewById(R.id.restaurant_detail_nb_place)).setText(restaurant.getNb_place() + Constantes.PLACES);
+            ((TextView) rootView.findViewById(R.id.restaurant_detail_terrasse)).setText(restaurant.getTerrasse());
+            ((TextView) rootView.findViewById(R.id.restaurant_detail_infos_complementaires)).setText(restaurant.getInfos_complementaires());
+           /* ((ImageView) rootView.findViewById(R.id.restaurant_detail_logo_wifi));
+            ((ImageView) rootView.findViewById(R.id.restaurant_detail_logo_acces_handicapes));
+            ((ImageView) rootView.findViewById(R.id.restaurant_detail_logo_parking));*/
         }
 
         return rootView;

@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">Ch\'ti Charivari</string>
     <string name="title_restaurant_detail">Restaurant Detail</string>
+
+    <!-- Ecran detail du restaurant -->
+    <string name="title_detail">Le Ch\'ti Charivari</string>
+    <string name="title_detail_horaire">Horaire d\'ouverture :</string>
+    <string name="title_detail_info">Informations :</string>
+    <string name="title_detail_services">Services :</string>
+    <string name="button_detail_itineraire">Itinéraire</string>
+    <string name="button_detail_appel">Appeler</string>
+    <string name="button_detail_reserver">Réserver</string>
 </resources>

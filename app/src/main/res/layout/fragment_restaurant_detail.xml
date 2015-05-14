@@ -1,31 +1,182 @@
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/restaurant_detail"
+    android:background="@color/blanc"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/corps">
+    android:layout_height="match_parent">
 
-    <TextView
-        style="?android:attr/textAppearanceLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:textIsSelectable="true"
-        android:id="@+id/restaurant_detail_id"
-        android:text="1"
-        tools:context=".RestaurantDetailFragment" />
+    <RelativeLayout
+        android:id="@+id/restaurant_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/corps">
 
-    <TextView
-        style="?android:attr/textAppearanceLarge"
-        android:layout_width="wrap_content"
-        android:layout_toRightOf="@+id/restaurant_detail_id"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:textIsSelectable="true"
-        android:id="@+id/restaurant_detail_ville"
-        android:text="Boulogne"
-        tools:context=".RestaurantDetailFragment" />
+        <TextView
+            style="?android:attr/textAppearanceLarge"
+            android:id="@+id/restaurant_detail_chti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:text="@string/title_detail"
+            android:gravity="center_horizontal"
+            android:textColor="@color/marron_titre"
+            tools:context=".RestaurantDetailFragment" />
 
-</RelativeLayout>
+        <TextView
+            style="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/restaurant_detail_chti"
+            android:id="@+id/restaurant_detail_ville"
+            android:text="Boulogne sur Mer"
+            android:textStyle="bold"
+            android:textColor="@color/marron_titre"
+            android:gravity="center_horizontal"
+            tools:context=".RestaurantDetailFragment" />
+
+        <LinearLayout
+            android:id="@+id/layout_detail_informations"
+            android:layout_below="@id/restaurant_detail_ville"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_detail_horaire"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:id="@+id/restaurant_detail_horaire"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:id="@+id/info_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/title_detail_info"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/restaurant_detail_nb_place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:id="@+id/restaurant_detail_terrasse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:id="@+id/restaurant_detail_infos_complementaires"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    />
+
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:id="@+id/imageView_detail_restaurant"
+                android:src="@drawable/boulognesurmer"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/restaurant_detail_services"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_detail_services"
+            android:layout_below="@id/layout_detail_informations"
+            android:layout_marginBottom="5dp"
+            android:layout_alignLeft="@id/layout_detail_informations"
+            android:textStyle="bold"
+            />
+        <LinearLayout
+            android:id="@+id/layout_detail_icon"
+            android:layout_below="@id/restaurant_detail_services"
+            android:layout_width="wrap_content"
+            android:layout_alignLeft="@id/layout_detail_informations"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/restaurant_detail_logo_wifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_wifi"
+                android:layout_marginRight="5dp"
+                />
+            <ImageView
+                android:id="@+id/restaurant_detail_logo_acces_handicapes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_accessible"
+                android:layout_marginRight="5dp"
+                />
+            <ImageView
+                android:id="@+id/restaurant_detail_logo_parking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_parking"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/restaurant_detail_adresse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_detail_icon"
+            android:text="35 rue des pyramides leonce tobo"
+            android:textColor="@color/gris_fonce"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            tools:context=".RestaurantDetailFragment" />
+
+        <LinearLayout
+            android:id="@+id/layout_detail_bouton"
+            android:layout_below="@id/restaurant_detail_adresse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/button_detail_itineraire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_detail_itineraire"/>
+            <Button
+                android:id="@+id/button_detail_appel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_detail_appel"/>
+            <Button
+                android:id="@+id/button_detail_reserver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_detail_reserver"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</ScrollView>
 

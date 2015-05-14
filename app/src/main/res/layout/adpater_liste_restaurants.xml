@@ -18,7 +18,8 @@
         android:orientation="horizontal"
         android:layout_margin="10dp">
 
-        <TextView android:text="Boulogne sur mer" android:id="@+id/restaurant_nom"
+        <TextView
+            android:id="@+id/restaurant_list_nom"
             android:textSize="16sp"
             android:textColor="@color/marron_nom_restaurant"
             android:textStyle="bold"
@@ -26,7 +27,9 @@
             android:layout_height="wrap_content">
         </TextView>
 
-        <TextView android:text="141 km" android:id="@+id/restaurant_distance"
+        <TextView
+            android:text="141 km"
+            android:id="@+id/restaurant_list_distance"
             android:gravity="right"
             android:textColor="@color/marron_nom_restaurant"
             android:layout_width="match_parent"
@@ -34,8 +37,8 @@
         </TextView>
     </LinearLayout>
 
-    <TextView android:text="35 rue des pyramides Boulogne sur mer 59000 France"
-        android:id="@+id/restaurant_adresse"
+    <TextView
+        android:id="@+id/restaurant_list_adresse"
         android:layout_marginLeft="10dp"
         android:textColor="@color/gris"
         android:textStyle="italic"
