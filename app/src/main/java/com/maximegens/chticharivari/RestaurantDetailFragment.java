@@ -2,6 +2,9 @@ package com.maximegens.chticharivari;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Canvas;
+import android.graphics.ColorFilter;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -68,6 +71,7 @@ public class RestaurantDetailFragment extends Fragment {
         ImageView logoWifi = (ImageView) rootView.findViewById(R.id.restaurant_detail_logo_wifi);
         ImageView logoAccesHandicapee =(ImageView) rootView.findViewById(R.id.restaurant_detail_logo_acces_handicapes);
         ImageView logoParking = (ImageView) rootView.findViewById(R.id.restaurant_detail_logo_parking);
+        ImageView imgRestaurant = (ImageView) rootView.findViewById(R.id.imageView_detail_restaurant);
         TextView service = (TextView) rootView.findViewById(R.id.restaurant_detail_services);
         TextView informations = (TextView) rootView.findViewById(R.id.info_detail);
         Button itineraireButton = (Button) rootView.findViewById(R.id.button_detail_itineraire);
@@ -113,6 +117,11 @@ public class RestaurantDetailFragment extends Fragment {
             if(existeInformations){
                 informations.setVisibility(View.VISIBLE);
             }
+
+            //On affiche l'image du restaurant
+            String uri = restaurant.getUrl_local();
+            int imageResource = getResources().getIdentifier(uri, "drawable", getActivity().getApplicationContext().getPackageName());
+            imgRestaurant.setImageResource(imageResource);
 
             //On affiche les logos si le restaurants en possede.
             if(restaurant.getWifi().equals(Constantes.TRUE)){
