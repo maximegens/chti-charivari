@@ -94,10 +94,8 @@ public class RestaurantListFragment extends ListFragment {
 
         }else{
             //on recupere la liste dans le fichier local
-            json = Json.getJsonFromAssets(getActivity().getAssets(), Constantes.LOCAL_RESTAURANTS_CHTI_CHARIVARI);
+            json = Json.getJsonFromAssets(getActivity().getAssets(), Constantes.LOCAL_JSON_RESTAURANTS_CHTI_CHARIVARI);
             restaurants = new Gson().fromJson(json, LesRestaurantsChti.class);
-
-
         }
 
         //Création et initialisation de l'Adapter pour les personnes
