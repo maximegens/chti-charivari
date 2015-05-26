@@ -1,4 +1,4 @@
-package com.maximegens.chticharivari.Adapters;
+package com.maximegens.chticharivari.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.maximegens.chticharivari.Beans.RestaurantChti;
+import com.maximegens.chticharivari.beans.RestaurantChti;
 import com.maximegens.chticharivari.R;
 
 import java.util.ArrayList;
@@ -46,9 +46,9 @@ public class RestaurantsAdapter extends BaseAdapter {
     }
 
     /**
-     * Permet de retourner le restaurant à la position passé en paramétre.
-     * @param position La position de l'objet demandé.
-     * @return Un ChtiCharivari correspond à la position demandée.
+     * Permet de retourner le restaurant ï¿½ la position passï¿½ en paramï¿½tre.
+     * @param position La position de l'objet demandï¿½.
+     * @return Un ChtiCharivari correspond ï¿½ la position demandï¿½e.
      */
     @Override
     public Object getItem(int position) {
@@ -56,9 +56,9 @@ public class RestaurantsAdapter extends BaseAdapter {
     }
 
     /**
-     * Permet de retourner l'id du restaurant à la position passé en paramétre.
-     * @param position La position de l'objet demandé.
-     * @return L'id du ChtiCharivari correspond à la position demandée.
+     * Permet de retourner l'id du restaurant ï¿½ la position passï¿½ en paramï¿½tre.
+     * @param position La position de l'objet demandï¿½.
+     * @return L'id du ChtiCharivari correspond ï¿½ la position demandï¿½e.
      */
     @Override
     public long getItemId(int position) {
@@ -66,11 +66,11 @@ public class RestaurantsAdapter extends BaseAdapter {
     }
 
     /**
-     * Défini et construis la vue pour chaque items.
+     * Dï¿½fini et construis la vue pour chaque items.
      * @param position la position de l'item dans la liste.
      * @param convertView La vue a convertir.
      * @param parent Le parents.
-     * @return La vue associée avec les valeurs.
+     * @return La vue associï¿½e avec les valeurs.
      */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -86,11 +86,11 @@ public class RestaurantsAdapter extends BaseAdapter {
 
         //(2) : Recuperation des TextView de notre layout
         TextView restaurantId = (TextView)layoutItem.findViewById(R.id.restaurant_id);
-        TextView restaurantVille = (TextView)layoutItem.findViewById(R.id.restaurant_ville);
+        TextView restaurantVille = (TextView)layoutItem.findViewById(R.id.restaurant_detail_ville);
 
         //(3) : Renseignement des valeurs
         restaurantId.setText(listRestaurants.get(position).getId());
-        restaurantVille.setText(listRestaurants.get(position).getVille());
+        restaurantVille.setText(listRestaurants.get(position).getNom());
 
         //On retourne l'item cree.
         return layoutItem;
