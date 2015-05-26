@@ -2,9 +2,9 @@
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/app/src/main/assets/restaurantsChtiCharivari.json" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/maximegens/chticharivari/Adapters/RestaurantsAdapter.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/maximegens/chticharivari/RestaurantDetailFragment.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/maximegens/chticharivari/RestaurantListFragment.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/maximegens/chticharivari/adapters/RestaurantsAdapter.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/maximegens/chticharivari/asyncTask/RetreiveJsonOnline.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/maximegens/chticharivari/utils/Connection.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/maximegens/chticharivari/utils/Constantes.java" charset="UTF-8" />
