@@ -2,9 +2,6 @@ package com.maximegens.chticharivari;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Canvas;
-import android.graphics.ColorFilter;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -20,8 +17,6 @@ import android.widget.TextView;
 import com.maximegens.chticharivari.beans.LesRestaurantsChti;
 import com.maximegens.chticharivari.beans.RestaurantChti;
 import com.maximegens.chticharivari.utils.Constantes;
-
-import org.w3c.dom.Text;
 
 /**
  * A fragment representing a single Restaurant detail screen.

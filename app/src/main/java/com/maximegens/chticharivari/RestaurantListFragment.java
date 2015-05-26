@@ -1,9 +1,6 @@
 package com.maximegens.chticharivari;
 
 import android.app.Activity;
-import android.graphics.Color;
-import android.graphics.drawable.ClipDrawable;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.View;
@@ -12,10 +9,9 @@ import android.widget.Toast;
 
 
 import com.google.gson.Gson;
-import com.maximegens.chticharivari.adapters.RestaurantsAdapter;
+import com.maximegens.chticharivari.Adapters.RestaurantsAdapter;
 import com.maximegens.chticharivari.beans.LesRestaurantsChti;
 import com.maximegens.chticharivari.beans.RestaurantChti;
-import com.maximegens.chticharivari.utils.Connection;
 import com.maximegens.chticharivari.utils.Constantes;
 import com.maximegens.chticharivari.utils.Json;
 
