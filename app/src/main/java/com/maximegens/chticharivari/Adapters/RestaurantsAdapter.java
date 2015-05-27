@@ -1,4 +1,4 @@
-package com.maximegens.chticharivari.adapters;
+package com.maximegens.chticharivari.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -86,12 +86,13 @@ public class RestaurantsAdapter extends BaseAdapter {
 
         //(2) : Recuperation des TextView de notre layout
         TextView restaurantId = (TextView)layoutItem.findViewById(R.id.restaurant_id);
-        TextView restaurantVille = (TextView)layoutItem.findViewById(R.id.restaurant_detail_ville);
+        TextView restaurantVille = (TextView)layoutItem.findViewById(R.id.restaurant_list_nom);
+        TextView restaurantAdresse = (TextView)layoutItem.findViewById(R.id.restaurant_list_adresse);
 
         //(3) : Renseignement des valeurs
-        restaurantId.setText(listRestaurants.get(position).getId());
+        restaurantId.setText(String.valueOf(listRestaurants.get(position).getId()));
         restaurantVille.setText(listRestaurants.get(position).getNom());
-
+        restaurantAdresse.setText(listRestaurants.get(position).getAdresse());
         //On retourne l'item cree.
         return layoutItem;
     }

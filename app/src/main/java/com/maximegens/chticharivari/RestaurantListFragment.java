@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 
 import com.google.gson.Gson;
-import com.maximegens.chticharivari.adapters.RestaurantsAdapter;
+import com.maximegens.chticharivari.Adapters.RestaurantsAdapter;
 import com.maximegens.chticharivari.beans.LesRestaurantsChti;
 import com.maximegens.chticharivari.beans.RestaurantChti;
 import com.maximegens.chticharivari.utils.Constantes;
